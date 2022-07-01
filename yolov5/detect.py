@@ -11,6 +11,8 @@ Usage - sources:
                                                              'https://youtu.be/Zgi9g1ksQHc'  # YouTube
                                                              'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
 
+python yolov5/detect.py --weights yolov5/runs/train/exp2/weights/best.pt --source datasets/data_th/images/val/THM_250.jpg
+
 Usage - formats:
     $ python path/to/detect.py --weights yolov5s.pt                 # PyTorch
                                          yolov5s.torchscript        # TorchScript
