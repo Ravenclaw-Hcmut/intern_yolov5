@@ -482,6 +482,8 @@ def check_dataset(data, autodownload=True):
     if val:
         val = [Path(x).resolve() for x in (val if isinstance(val, list) else [val])]  # val path
         if not all(x.exists() for x in val):
+            print('asdasd')
+            print(val)
             LOGGER.info(emojis('\nDataset not found ⚠, missing paths %s' % [str(x) for x in val if not x.exists()]))
             if not s or not autodownload:
                 raise Exception(emojis('Dataset not found ❌'))

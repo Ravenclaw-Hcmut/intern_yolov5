@@ -896,7 +896,7 @@ def extract_boxes(path=DATASETS_DIR / 'coco128'):  # from utils.dataloaders impo
                     assert cv2.imwrite(str(f), im[b[1]:b[3], b[0]:b[2]]), f'box failure in {f}'
 
 
-def autosplit(path=DATASETS_DIR / 'coco128/images', weights=(0.9, 0.1, 0.0), annotated_only=False):
+def autosplit(path=DATASETS_DIR / 'data_th_raw', weights=(0.9, 0.1, 0.0), annotated_only=False):
     """ Autosplit a dataset into train/val/test splits and save path/autosplit_*.txt files
     Usage: from utils.dataloaders import *; autosplit()
     Arguments
@@ -911,7 +911,7 @@ def autosplit(path=DATASETS_DIR / 'coco128/images', weights=(0.9, 0.1, 0.0), ann
     indices = random.choices([0, 1, 2], weights=weights, k=n)  # assign each image to a split
 
     txt = ['autosplit_train.txt', 'autosplit_val.txt', 'autosplit_test.txt']  # 3 txt files
-    [(path.parent / x).unlink(missing_ok=True) for x in txt]  # remove existing
+    # [(path.parent / x).unlink(missing_ok=True) for x in txt]  # remove existing
 
     print(f'Autosplitting images from {path}' + ', using *.txt labeled images only' * annotated_only)
     for i, img in tqdm(zip(indices, files), total=n):
