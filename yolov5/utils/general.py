@@ -506,6 +506,10 @@ def check_dataset(data, autodownload=True):
             s = f"success ✅ {dt}, saved to {colorstr('bold', root)}" if r in (0, None) else f"failure {dt} ❌"
             LOGGER.info(emojis(f"Dataset download {s}"))
     check_font('Arial.ttf' if is_ascii(data['names']) else 'Arial.Unicode.ttf', progress=True)  # download fonts
+    # HTL
+    print(data)
+    # print('rrrrrrrrrrrrrrrrrr')
+    # LOGGER.info("ffffffffffffffffffff")
     return data  # dictionary
 
 
