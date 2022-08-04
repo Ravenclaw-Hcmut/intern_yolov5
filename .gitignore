@@ -1,0 +1,3 @@
+yolov7-main/yolov7.pt
+yolov7-main/traced_model.pt
+yolov7-main/runs/train/exp2/weights/best.pt
