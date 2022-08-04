@@ -1,0 +1,6 @@
+Predited,TH_TRUE_JUICE_MILK_Actual,TH_TRUE_RICE_Actual,TH_TRUE_WATER_Actual,TH_TRUE_JUICE_Actual,background FP
+TH_TRUE_JUICE_MILK_Predicted,12.0,0.0,0.0,0.0,3.0
+TH_TRUE_RICE_Predicted,0.0,6.0,1.0,0.0,1.0
+TH_TRUE_WATER_Predicted,0.0,0.0,0.0,0.0,1.0
+TH_TRUE_JUICE_Predicted,0.0,0.0,0.0,5.0,1.0
+background FN,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,110 @@
+YOLOR 🚀 2022-7-30 torch 1.11.0+cu102 CUDA:0 (Tesla T4, 15109.75MB)
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+[34m[1mtensorboard: [39m[22mStart with 'tensorboard --logdir runs/train', view at http://localhost:6006/
+line 610 train.py
+{'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.3, 'cls_pw': 1.0, 'obj': 0.7, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.2, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.15, 'copy_paste': 0.0, 'paste_in': 0.15}
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+cuda:0
+<torch.utils.tensorboard.writer.SummaryWriter object at 0x7f1ea7b4fa50>
+[34m[1mhyperparameters: [39m[22mlr0=0.01, lrf=0.1, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.3, cls_pw=1.0, obj=0.7, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.2, scale=0.9, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.15, copy_paste=0.0, paste_in=0.15
+[34m[1mwandb[39m[22m: Currently logged in as: [33mravenclaw[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Tracking run with wandb version 0.12.21
+[34m[1mwandb[39m[22m: Run data is saved locally in [35m[1m/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_035317-k8a2cawk
+[34m[1mwandb[39m[22m: Run [1m`wandb offline`[22m to turn off syncing.
+[34m[1mwandb[39m[22m: Syncing run [33mexp
+[34m[1mwandb[39m[22m: ⭐️ View project at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR
+[34m[1mwandb[39m[22m: 🚀 View run at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/k8a2cawk
+Traceback (most recent call last):
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 26, in attempt_download
+    assets = [x['name'] for x in response['assets']]  # release assets
+KeyError: 'assets'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train.py", line 615, in <module>
+    train(hyp, opt, device, tb_writer)
+  File "train.py", line 86, in train
+    attempt_download(weights)  # download if not found locally
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 30, in attempt_download
+    tag = subprocess.check_output('git tag', shell=True).decode().split()[-1]
+IndexError: list index out of range
+[34m[1mwandb[39m[22m: Waiting for W&B process to finish... [31m(failed 1).[39m Press Control-C to abort syncing.
+
+[34m[1mwandb[39m[22m:
+[34m[1mwandb[39m[22m: Synced [33mexp[39m: [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/k8a2cawk
+[34m[1mwandb[39m[22m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[39m[22m: Find logs at: [35m[1m./wandb/run-20220802_035317-k8a2cawk/logs
+YOLOR 🚀 2022-7-30 torch 1.11.0+cu102 CUDA:0 (Tesla T4, 15109.75MB)
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp3', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+[34m[1mtensorboard: [39m[22mStart with 'tensorboard --logdir runs/train', view at http://localhost:6006/
+line 610 train.py
+{'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.3, 'cls_pw': 1.0, 'obj': 0.7, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.2, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.15, 'copy_paste': 0.0, 'paste_in': 0.15}
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp3', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+cuda:0
+<torch.utils.tensorboard.writer.SummaryWriter object at 0x7f203c925650>
+[34m[1mhyperparameters: [39m[22mlr0=0.01, lrf=0.1, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.3, cls_pw=1.0, obj=0.7, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.2, scale=0.9, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.15, copy_paste=0.0, paste_in=0.15
+[34m[1mwandb[39m[22m: Currently logged in as: [33mravenclaw[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Tracking run with wandb version 0.12.21
+[34m[1mwandb[39m[22m: Run data is saved locally in [35m[1m/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_040819-37kbpsdj
+[34m[1mwandb[39m[22m: Run [1m`wandb offline`[22m to turn off syncing.
+[34m[1mwandb[39m[22m: Syncing run [33mexp3
+[34m[1mwandb[39m[22m: ⭐️ View project at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR
+[34m[1mwandb[39m[22m: 🚀 View run at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/37kbpsdj
+Traceback (most recent call last):
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 26, in attempt_download
+    assets = [x['name'] for x in response['assets']]  # release assets
+KeyError: 'assets'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train.py", line 615, in <module>
+    train(hyp, opt, device, tb_writer)
+  File "train.py", line 86, in train
+    attempt_download(weights)  # download if not found locally
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 30, in attempt_download
+    tag = subprocess.check_output('git tag', shell=True).decode().split()[-1]
+IndexError: list index out of range
+[34m[1mwandb[39m[22m: Waiting for W&B process to finish... [31m(failed 1).[39m Press Control-C to abort syncing.
+
+
+[34m[1mwandb[39m[22m:
+[34m[1mwandb[39m[22m: Synced [33mexp3[39m: [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/37kbpsdj
+[34m[1mwandb[39m[22m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[39m[22m: Find logs at: [35m[1m./wandb/run-20220802_040819-37kbpsdj/logs
+Known TensorBoard instances:
+  - port 6006: logdir runs/train (started 1:05:39 ago; pid 2021)
+Selecting TensorBoard with logdir runs/train (started 1:06:07 ago; port 6006, pid 2021).
+Selecting TensorBoard with logdir runs/train (started 1:10:00 ago; port 6006, pid 2021).
+YOLOR 🚀 2022-7-30 torch 1.11.0+cu102 CUDA:0 (Tesla T4, 15109.75MB)
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp4', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+[34m[1mtensorboard: [39m[22mStart with 'tensorboard --logdir runs/train', view at http://localhost:6006/
+line 610 train.py
+{'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.3, 'cls_pw': 1.0, 'obj': 0.7, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.2, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.15, 'copy_paste': 0.0, 'paste_in': 0.15}
+Namespace(adam=False, artifact_alias='latest', batch_size=16, bbox_interval=-1, bucket='', cache_images=False, cfg='cfg/training/yolov7.yaml', data='data/th.yaml', device='0', entity=None, epochs=100, evolve=False, exist_ok=False, global_rank=-1, hyp='data/hyp.scratch.p5.yaml', image_weights=False, img_size=[640, 640], label_smoothing=0.0, linear_lr=False, local_rank=-1, multi_scale=False, name='exp', noautoanchor=False, nosave=False, notest=False, project='runs/train', quad=False, rect=False, resume=False, save_dir='runs/train/exp4', save_period=-1, single_cls=False, sync_bn=False, total_batch_size=16, upload_dataset=False, weights='runs\\train\\exp2\\weights\\best.pt', workers=8, world_size=1)
+cuda:0
+<torch.utils.tensorboard.writer.SummaryWriter object at 0x7f31c1bc3fd0>
+[34m[1mhyperparameters: [39m[22mlr0=0.01, lrf=0.1, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.3, cls_pw=1.0, obj=0.7, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.2, scale=0.9, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.15, copy_paste=0.0, paste_in=0.15
+[34m[1mwandb[39m[22m: Currently logged in as: [33mravenclaw[39m. Use [1m`wandb login --relogin`[22m to force relogin
+[34m[1mwandb[39m[22m: Tracking run with wandb version 0.12.21
+[34m[1mwandb[39m[22m: Run data is saved locally in [35m[1m/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_045121-ggpgmzr6
+[34m[1mwandb[39m[22m: Run [1m`wandb offline`[22m to turn off syncing.
+[34m[1mwandb[39m[22m: Syncing run [33mexp4
+[34m[1mwandb[39m[22m: ⭐️ View project at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR
+[34m[1mwandb[39m[22m: 🚀 View run at [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/ggpgmzr6
+Traceback (most recent call last):
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 26, in attempt_download
+    assets = [x['name'] for x in response['assets']]  # release assets
+KeyError: 'assets'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "train.py", line 615, in <module>
+    train(hyp, opt, device, tb_writer)
+  File "train.py", line 86, in train
+    attempt_download(weights)  # download if not found locally
+  File "/content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/utils/google_utils.py", line 30, in attempt_download
+    tag = subprocess.check_output('git tag', shell=True).decode().split()[-1]
+IndexError: list index out of range
+[34m[1mwandb[39m[22m: Waiting for W&B process to finish... [31m(failed 1).[39m Press Control-C to abort syncing.
+
+[34m[1mwandb[39m[22m:
+[34m[1mwandb[39m[22m: Synced [33mexp4[39m: [34m[4mhttps://wandb.ai/ravenclaw/YOLOR/runs/ggpgmzr6
+[34m[1mwandb[39m[22m: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+[34m[1mwandb[39m[22m: Find logs at: [35m[1m./wandb/run-20220802_045121-ggpgmzr6/logs

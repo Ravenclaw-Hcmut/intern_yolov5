@@ -1,0 +1,149 @@
+2022-08-02 05:03:18,821 INFO    MainThread:3248 [internal.py:wandb_internal():93] W&B internal server running at pid: 3248, started at: 2022-08-02 05:03:18.818690
+2022-08-02 05:03:18,824 INFO    WriterThread:3248 [datastore.py:open_for_write():75] open: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/run-2wzg7o24.wandb
+2022-08-02 05:03:18,830 DEBUG   SenderThread:3248 [sender.py:send():236] send: header
+2022-08-02 05:03:18,830 DEBUG   SenderThread:3248 [sender.py:send():236] send: run
+2022-08-02 05:03:18,845 INFO    SenderThread:3248 [sender.py:_maybe_setup_resume():494] checking resume status for None/YOLOR/2wzg7o24
+2022-08-02 05:03:19,379 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: check_version
+2022-08-02 05:03:19,385 INFO    SenderThread:3248 [dir_watcher.py:__init__():216] watching files in: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files
+2022-08-02 05:03:19,385 INFO    SenderThread:3248 [sender.py:_start_run_threads():818] run started: 2wzg7o24 with start time 1659416597
+2022-08-02 05:03:19,386 DEBUG   SenderThread:3248 [sender.py:send():236] send: summary
+2022-08-02 05:03:19,389 INFO    SenderThread:3248 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-02 05:03:19,391 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: check_version
+2022-08-02 05:03:19,423 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: run_start
+2022-08-02 05:03:19,426 DEBUG   HandlerThread:3248 [meta.py:__init__():35] meta init
+2022-08-02 05:03:19,427 DEBUG   HandlerThread:3248 [meta.py:__init__():49] meta init done
+2022-08-02 05:03:19,427 DEBUG   HandlerThread:3248 [meta.py:probe():209] probe
+2022-08-02 05:03:19,439 DEBUG   HandlerThread:3248 [meta.py:_setup_git():199] setup git
+2022-08-02 05:03:19,480 DEBUG   HandlerThread:3248 [meta.py:_setup_git():206] setup git done
+2022-08-02 05:03:19,480 DEBUG   HandlerThread:3248 [meta.py:_save_pip():53] save pip
+2022-08-02 05:03:19,485 DEBUG   HandlerThread:3248 [meta.py:_save_pip():67] save pip done
+2022-08-02 05:03:19,486 DEBUG   HandlerThread:3248 [meta.py:probe():247] probe done
+2022-08-02 05:03:19,553 DEBUG   SenderThread:3248 [sender.py:send():236] send: files
+2022-08-02 05:03:19,553 INFO    SenderThread:3248 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2022-08-02 05:03:19,572 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: stop_status
+2022-08-02 05:03:19,574 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: stop_status
+2022-08-02 05:03:19,826 DEBUG   SenderThread:3248 [sender.py:send():236] send: telemetry
+2022-08-02 05:03:19,827 DEBUG   SenderThread:3248 [sender.py:send():236] send: telemetry
+2022-08-02 05:03:19,827 DEBUG   SenderThread:3248 [sender.py:send():236] send: config
+2022-08-02 05:03:19,828 DEBUG   SenderThread:3248 [sender.py:send():236] send: config
+2022-08-02 05:03:19,925 DEBUG   SenderThread:3248 [sender.py:send():236] send: telemetry
+2022-08-02 05:03:20,222 INFO    Thread-11 :3248 [upload_job.py:push():138] Uploaded file /tmp/tmpmk08t2t_wandb/2bv490u4-wandb-metadata.json
+2022-08-02 05:03:20,391 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_created():269] file/dir created: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/requirements.txt
+2022-08-02 05:03:20,391 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_created():269] file/dir created: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-summary.json
+2022-08-02 05:03:20,392 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_created():269] file/dir created: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/output.log
+2022-08-02 05:03:20,393 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_created():269] file/dir created: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-metadata.json
+2022-08-02 05:03:22,080 DEBUG   SenderThread:3248 [sender.py:send():236] send: exit
+2022-08-02 05:03:22,081 INFO    SenderThread:3248 [sender.py:send_exit():372] handling exit code: 1
+2022-08-02 05:03:22,081 INFO    SenderThread:3248 [sender.py:send_exit():374] handling runtime: 2
+2022-08-02 05:03:22,081 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:22,086 INFO    SenderThread:3248 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-02 05:03:22,087 INFO    SenderThread:3248 [sender.py:send_exit():380] send defer
+2022-08-02 05:03:22,088 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:22,088 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,088 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 0
+2022-08-02 05:03:22,089 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,089 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 0
+2022-08-02 05:03:22,089 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 1
+2022-08-02 05:03:22,090 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,090 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 1
+2022-08-02 05:03:22,157 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,157 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 1
+2022-08-02 05:03:22,157 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 2
+2022-08-02 05:03:22,157 DEBUG   SenderThread:3248 [sender.py:send():236] send: stats
+2022-08-02 05:03:22,158 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,158 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 2
+2022-08-02 05:03:22,158 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,159 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 2
+2022-08-02 05:03:22,159 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 3
+2022-08-02 05:03:22,159 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,159 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 3
+2022-08-02 05:03:22,160 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,160 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 3
+2022-08-02 05:03:22,160 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 4
+2022-08-02 05:03:22,161 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,161 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 4
+2022-08-02 05:03:22,161 DEBUG   SenderThread:3248 [sender.py:send():236] send: summary
+2022-08-02 05:03:22,165 INFO    SenderThread:3248 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2022-08-02 05:03:22,166 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,166 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 4
+2022-08-02 05:03:22,167 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 5
+2022-08-02 05:03:22,167 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,167 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 5
+2022-08-02 05:03:22,167 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,168 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 5
+2022-08-02 05:03:22,190 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:22,395 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_modified():286] file/dir modified: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-summary.json
+2022-08-02 05:03:22,396 INFO    Thread-7  :3248 [dir_watcher.py:_on_file_modified():286] file/dir modified: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/output.log
+2022-08-02 05:03:22,468 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 6
+2022-08-02 05:03:22,469 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:22,470 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:22,471 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 6
+2022-08-02 05:03:22,472 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:22,472 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 6
+2022-08-02 05:03:22,472 INFO    SenderThread:3248 [dir_watcher.py:finish():353] shutting down directory watcher
+2022-08-02 05:03:22,572 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,400 INFO    SenderThread:3248 [dir_watcher.py:_on_file_modified():286] file/dir modified: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/config.yaml
+2022-08-02 05:03:23,401 INFO    SenderThread:3248 [dir_watcher.py:finish():383] scan: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files
+2022-08-02 05:03:23,402 INFO    SenderThread:3248 [dir_watcher.py:finish():397] scan save: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/config.yaml config.yaml
+2022-08-02 05:03:23,404 INFO    SenderThread:3248 [dir_watcher.py:finish():397] scan save: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-summary.json wandb-summary.json
+2022-08-02 05:03:23,408 INFO    SenderThread:3248 [dir_watcher.py:finish():397] scan save: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/requirements.txt requirements.txt
+2022-08-02 05:03:23,413 INFO    SenderThread:3248 [dir_watcher.py:finish():397] scan save: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-metadata.json wandb-metadata.json
+2022-08-02 05:03:23,414 INFO    SenderThread:3248 [dir_watcher.py:finish():397] scan save: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/output.log output.log
+2022-08-02 05:03:23,422 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 7
+2022-08-02 05:03:23,422 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:23,423 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:23,425 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 7
+2022-08-02 05:03:23,425 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:23,425 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 7
+2022-08-02 05:03:23,425 INFO    SenderThread:3248 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-02 05:03:23,525 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,526 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:23,628 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,629 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:23,731 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,731 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:23,833 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,834 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:23,936 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:23,936 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,039 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:24,039 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,060 INFO    Thread-15 :3248 [upload_job.py:push():138] Uploaded file /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/output.log
+2022-08-02 05:03:24,077 INFO    Thread-12 :3248 [upload_job.py:push():138] Uploaded file /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/config.yaml
+2022-08-02 05:03:24,081 INFO    Thread-14 :3248 [upload_job.py:push():138] Uploaded file /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/requirements.txt
+2022-08-02 05:03:24,082 INFO    Thread-13 :3248 [upload_job.py:push():138] Uploaded file /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/files/wandb-summary.json
+2022-08-02 05:03:24,142 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:24,142 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,244 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:24,245 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,283 INFO    Thread-6  :3248 [sender.py:transition_state():393] send defer: 8
+2022-08-02 05:03:24,284 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:24,284 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 8
+2022-08-02 05:03:24,284 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:24,284 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 8
+2022-08-02 05:03:24,347 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:24,860 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 9
+2022-08-02 05:03:24,861 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,861 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:24,862 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 9
+2022-08-02 05:03:24,863 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:24,863 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 9
+2022-08-02 05:03:24,863 INFO    SenderThread:3248 [sender.py:transition_state():393] send defer: 10
+2022-08-02 05:03:24,864 DEBUG   SenderThread:3248 [sender.py:send():236] send: final
+2022-08-02 05:03:24,865 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: defer
+2022-08-02 05:03:24,865 DEBUG   SenderThread:3248 [sender.py:send():236] send: footer
+2022-08-02 05:03:24,865 INFO    HandlerThread:3248 [handler.py:handle_request_defer():163] handle defer: 10
+2022-08-02 05:03:24,866 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: defer
+2022-08-02 05:03:24,866 INFO    SenderThread:3248 [sender.py:send_request_defer():389] handle sender defer: 10
+2022-08-02 05:03:24,964 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: poll_exit
+2022-08-02 05:03:24,964 DEBUG   SenderThread:3248 [sender.py:send_request():250] send_request: poll_exit
+2022-08-02 05:03:24,965 INFO    SenderThread:3248 [file_pusher.py:join():176] waiting for file pusher
+2022-08-02 05:03:25,548 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: sampled_history
+2022-08-02 05:03:25,549 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: get_summary
+2022-08-02 05:03:25,551 DEBUG   HandlerThread:3248 [handler.py:handle_request():140] handle_request: shutdown
+2022-08-02 05:03:25,551 INFO    HandlerThread:3248 [handler.py:finish():806] shutting down handler
+2022-08-02 05:03:25,864 INFO    WriterThread:3248 [datastore.py:close():279] close: /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov7-main/wandb/run-20220802_050317-2wzg7o24/run-2wzg7o24.wandb
+2022-08-02 05:03:26,447 INFO    SenderThread:3248 [sender.py:finish():1114] shutting down sender
+2022-08-02 05:03:26,447 INFO    SenderThread:3248 [file_pusher.py:finish():171] shutting down file pusher
+2022-08-02 05:03:26,447 INFO    SenderThread:3248 [file_pusher.py:join():176] waiting for file pusher
+2022-08-02 05:03:26,450 INFO    MainThread:3248 [internal.py:handle_exit():80] Internal process exited

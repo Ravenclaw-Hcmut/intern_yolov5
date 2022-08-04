@@ -1,0 +1,156 @@
+wandb: Currently logged in as: ravenclaw. Use `wandb login --relogin` to force relogin
+train: weights=runs/train/exp9/weights/best.pt, cfg=, data=th.yaml, hyp=data/hyps/hyp.scratch-low.yaml, epochs=3, batch_size=1, imgsz=640, rect=False, resume=False, nosave=False, noval=False, noautoanchor=False, noplots=False, evolve=None, bucket=, cache=None, image_weights=False, device=, multi_scale=False, single_cls=False, optimizer=SGD, sync_bn=False, workers=8, project=runs/train, name=exp, exist_ok=False, quad=False, cos_lr=False, label_smoothing=0.0, patience=100, freeze=[0], save_period=-1, local_rank=-1, entity=None, upload_dataset=False, bbox_interval=-1, artifact_alias=latest
+github: skipping check (not a git repository), for updates see https://github.com/ultralytics/yolov5
+YOLOv5 🚀 2022-7-26 Python-3.7.13 torch-1.12.0+cu113 CUDA:0 (Tesla T4, 15110MiB)
+
+hyperparameters: lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.5, cls_pw=1.0, obj=1.0, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0, copy_paste=0.0
+TensorBoard: Start with 'tensorboard --logdir runs/train', view at http://localhost:6006/
+wandb: Tracking run with wandb version 0.12.21
+wandb: Run data is saved locally in /content/drive/Othercomputers/My Laptop/source/intern_yolov5/yolov5/wandb/run-20220730_095936-38gol4m2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run proud-surf-49
+wandb: ⭐️ View project at https://wandb.ai/ravenclaw/YOLOv5
+wandb: 🚀 View run at https://wandb.ai/ravenclaw/YOLOv5/runs/38gol4m2
+{'path': '../datasets/data_th_tmp', 'train': '/content/drive/Othercomputers/My Laptop/source/intern_yolov5/datasets/data_th_tmp/images/train', 'val': '/content/drive/Othercomputers/My Laptop/source/intern_yolov5/datasets/data_th_tmp/images/val', 'nc': 4, 'names': ['TH_TRUE_JUICE_MILK', 'TH_TRUE_RICE', 'TH_TRUE_WATER', 'TH_TRUE_JUICE']}
+YOLOv5 temporarily requires wandb version 0.12.10 or below. Some features may not work as expected.
+
+                 from  n    params  module                                  arguments                     
+  0                -1  1      3520  models.common.Conv                      [3, 32, 6, 2, 2]              
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]                
+  2                -1  1     18816  models.common.C3                        [64, 64, 1]                   
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]               
+  4                -1  2    115712  models.common.C3                        [128, 128, 2]                 
+  5                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]              
+  6                -1  3    625152  models.common.C3                        [256, 256, 3]                 
+  7                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]              
+  8                -1  1   1182720  models.common.C3                        [512, 512, 1]                 
+  9                -1  1    656896  models.common.SPPF                      [512, 512, 5]                 
+ 10                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 11                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 12           [-1, 6]  1         0  models.common.Concat                    [1]                           
+ 13                -1  1    361984  models.common.C3                        [512, 256, 1, False]          
+ 14                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 15                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 16           [-1, 4]  1         0  models.common.Concat                    [1]                           
+ 17                -1  1     90880  models.common.C3                        [256, 128, 1, False]          
+ 18                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]              
+ 19          [-1, 14]  1         0  models.common.Concat                    [1]                           
+ 20                -1  1    296448  models.common.C3                        [256, 256, 1, False]          
+ 21                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]              
+ 22          [-1, 10]  1         0  models.common.Concat                    [1]                           
+ 23                -1  1   1182720  models.common.C3                        [512, 512, 1, False]          
+ 24      [17, 20, 23]  1     24273  models.yolo.Detect                      [4, [[10, 13, 16, 30, 33, 23], [30, 61, 62, 45, 59, 119], [116, 90, 156, 198, 373, 326]], [128, 256, 512]]
+Model summary: 270 layers, 7030417 parameters, 7030417 gradients, 16.0 GFLOPs
+
+Transferred 349/349 items from runs/train/exp9/weights/best.pt
+AMP: checks passed ✅
+Scaled weight_decay = 0.0005
+optimizer: SGD with parameter groups 57 weight (no decay), 60 weight, 60 bias
+albumentations: version 1.0.3 required by YOLOv5, but version 0.1.12 is currently installed
+train: Scanning '/content/drive/Othercomputers/My Laptop/source/intern_yolov5/datasets/data_th_tmp/labels/train.cache' images and labels... 2 found, 0 missing, 0 empty, 0 corrupt: 100% 2/2 [00:00<?, ?it/s]
+val: Scanning '/content/drive/Othercomputers/My Laptop/source/intern_yolov5/datasets/data_th_tmp/labels/val.cache' images and labels... 1 found, 0 missing, 0 empty, 0 corrupt: 100% 1/1 [00:00<?, ?it/s]
+Plotting labels to runs/train/exp27/labels.jpg... 
+
+AutoAnchor: 5.59 anchors/target, 1.000 Best Possible Recall (BPR). Current anchors are a good fit to dataset ✅
+Image sizes 640 train, 640 val
+Using 0 dataloader workers
+Logging results to runs/train/exp27
+Starting training for 3 epochs...
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       0/2    0.472G   0.06244    0.4937  0.009025        60       640: 100% 2/2 [00:02<00:00,  1.50s/it]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:01<00:00,  1.43s/it]
+line 279 in val.py:
+                 all          1         24      0.958      0.997      0.995      0.743
+line 288
+val.py, run(): 
+(0.958396526691196, 0.9965254776835659, 0.995, 0.7434725557674082, 0.025973891839385033, 0.07411888241767883, 0.004744899459183216) [    0.72568     0.77021       0.597       0.881] (0.2593994140625, 20.8585262298584, 10.149002075195312)
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       1/2    0.472G     0.045     0.168  0.006468        23       640: 100% 2/2 [00:00<00:00,  3.17it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  3.99it/s]
+line 288
+line 279 in val.py:
+                 all          1         24      0.967      0.956      0.995      0.708
+val.py, run(): 
+(0.9673520603691759, 0.9560564782807381, 0.995, 0.7076345832432291, 0.026326103135943413, 0.07697128504514694, 0.0047094933688640594) [    0.67721     0.73926       0.597     0.81708] (0.25177001953125, 20.33257484436035, 1.4123916625976562)
+
+     Epoch   gpu_mem       box       obj       cls    labels  img_size
+       2/2    0.472G   0.06258    0.2772   0.01036       132       640: 100% 2/2 [00:00<00:00,  2.89it/s]
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  3.96it/s]
+line 288
+line 279 in val.py:
+                 all          1         24      0.967      0.956      0.995      0.708
+val.py, run(): 
+(0.9673520603691759, 0.9560564782807381, 0.995, 0.7076345832432291, 0.026326103135943413, 0.07651855051517487, 0.0047094933688640594) [    0.67721     0.73926       0.597     0.81708] (0.2989768981933594, 19.96779441833496, 1.3592243194580078)
+
+3 epochs completed in 0.002 hours.
+Optimizer stripped from runs/train/exp27/weights/last.pt, 14.4MB
+Optimizer stripped from runs/train/exp27/weights/best.pt, 14.4MB
+
+Validating runs/train/exp27/weights/best.pt...
+Fusing layers... 
+Model summary: 213 layers, 7020913 parameters, 0 gradients, 15.8 GFLOPs
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100% 1/1 [00:00<00:00,  3.60it/s]
+line 288
+line 279 in val.py:
+[0 1 2 3]
+0
+                 all          1         24      0.959      0.996      0.995      0.744
+1
+2
+3
+['all', 'TH_TRUE_JUICE_MILK', 'TH_TRUE_RICE', 'TH_TRUE_WATER', 'TH_TRUE_JUICE']
+  TH_TRUE_JUICE_MILK          1         12          1      0.983      0.995      0.726
+        TH_TRUE_RICE          1          6      0.987          1      0.995       0.77
+       TH_TRUE_WATER          1          1       0.95          1      0.995      0.597
+       TH_TRUE_JUICE          1          5      0.899          1      0.995      0.881
+[[         12           0           0           0           3]
+ [          0           6           1           0           1]
+ [          0           0           0           0           1]
+ [          0           0           0           5           1]
+ [          0           0           0           0           0]]
+val.py, run(): 
+(0.9590134312161438, 0.9956549242479193, 0.995, 0.7435005416325522, 0.025974232703447342, 0.0736183300614357, 0.004744882695376873) [    0.72587     0.77013       0.597       0.881] (0.2803802490234375, 16.316652297973633, 1.4195442199707031)
+Results saved to runs/train/exp27
+wandb: Waiting for W&B process to finish... (success).
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:      metrics/mAP_0.5 ▁▁▁▁
+wandb: metrics/mAP_0.5:0.95 █▁▁█
+wandb:    metrics/precision ▁██▁
+wandb:       metrics/recall █▁▁█
+wandb:       train/box_loss █▁█
+wandb:       train/cls_loss ▆▁█
+wandb:       train/obj_loss █▁▃
+wandb:         val/box_loss ▁██▁
+wandb:         val/cls_loss █▁▁█
+wandb:         val/obj_loss ▂█▇▁
+wandb:                x/lr0 █▅▁
+wandb:                x/lr1 ▁█▆
+wandb:                x/lr2 ▁█▆
+wandb: 
+wandb: Run summary:
+wandb:           best/epoch 0
+wandb:         best/mAP_0.5 0.995
+wandb:    best/mAP_0.5:0.95 0.74347
+wandb:       best/precision 0.9584
+wandb:          best/recall 0.99653
+wandb:      metrics/mAP_0.5 0.995
+wandb: metrics/mAP_0.5:0.95 0.7435
+wandb:    metrics/precision 0.95901
+wandb:       metrics/recall 0.99565
+wandb:       train/box_loss 0.06258
+wandb:       train/cls_loss 0.01036
+wandb:       train/obj_loss 0.27723
+wandb:         val/box_loss 0.02597
+wandb:         val/cls_loss 0.00474
+wandb:         val/obj_loss 0.07362
+wandb:                x/lr0 0.09517
+wandb:                x/lr1 0.00017
+wandb:                x/lr2 0.00017
+wandb: 
+wandb: Synced proud-surf-49: https://wandb.ai/ravenclaw/YOLOv5/runs/38gol4m2
+wandb: Synced 5 W&B file(s), 16 media file(s), 1 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20220730_095936-38gol4m2/logs
