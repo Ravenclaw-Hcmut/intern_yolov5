@@ -8,7 +8,7 @@
       <h1> OCR Tool </h1>
       <p> Extract text from Images <p>
     </div> -->
-    <label for="image_file">Select image(s)</label>
+    <!-- <label for="image_file">Select image(s)</label>
     <input class="btn btn-warning" type="file" id="image_file" name="myfile" multiple>
     <br>
     <button class="btn btn-success" onclick="performOCR()"> Extract Text </button>
@@ -23,99 +23,259 @@
              role="status" id="loading">
             <span class="sr-only">Loading...</span>
         </div>
-    </div>
-    <h1>Registered Employees</h1>    
-    <div id="employees"></div>
+    </div> -->
+    <form method="POST" enctype="multipart/form-data">
+      <!-- <input type="file" name="file" id="fileId" onchange="imageUploaded()"> -->
+      <input type="file" name="file" id="fileId">
+      <button type="submit" role="button">Upload File</button>
+    </form>
+
+
 </body>
 
 <script>
-var xhr = new XMLHttpRequest();
+$('#fileId').change(function () {
+    // console.log('fffffffffffff')
+    // console.log(this.files[0].mozFullPath);
+    var fullPath = document.getElementById('fileId').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+            filename = filename.substring(1);
+        }
+        console.log(filename);
+    }
+});
+
+function get_input_name(){
+    var fullPath = document.getElementById('fileId').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+            filename = filename.substring(1);
+        }
+        console.log(typeof(filename));
+        console.log(filename);
+        return filename
+    }
+}
+
+let base64String = "";
+//OK
+function imageUploaded() {
+    var file = document.querySelector(
+        'input[type=file]')['files'][0];
+  
+    var reader = new FileReader();
+    console.log("next");
+      
+    reader.onload = function () {
+        base64String = reader.result.replace("data:", "");
+            // .replace(/^.+,/, "");
+  
+        imageBase64Stringsep = base64String;
+  
+        // alert(imageBase64Stringsep);
+        console.log(base64String);
+    }
+    reader.readAsDataURL(file);
+}
+  
+function displayString() {
+    console.log("Base64String about to be printed");
+    alert(base64String);
+}
+
+function dataURItoBlob(dataURI) {
+    // convert base64/URLEncoded data component to raw binary data held in a string
+    var byteString;
+    if (dataURI.split(',')[0].indexOf('base64') >= 0)
+        byteString = atob(dataURI.split(',')[1]);
+    else
+        byteString = unescape(dataURI.split(',')[1]);
+
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+
+    // write the bytes of the string to a typed array
+    var ia = new Uint8Array(byteString.length);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ia], {type:mimeString});
+}
 
 
-xhr.open("POST", "http://localhost:8008/object-to-json", true);
+
+
+
+
+// define URL and for element
+// const url = "http://localhost:8008/object-to-json";
+const url_root = "http://localhost:8008/path-to-json";
+const form = document.querySelector('form');
+
+function getBase64Image(){     
+        // p=document.getElementById("fileUpload").value;
+        p = file_send
+        img1.setAttribute('src', p); 
+        canvas.width = img1.width; 
+        canvas.height = img1.height; 
+        var ctx = canvas.getContext("2d"); 
+        ctx.drawImage(img1, 0, 0); 
+        var dataURL = canvas.toDataURL("image/png");
+        alert("from getbase64 function"+dataURL );    
+        return dataURL;
+    } 
+
+// add event listener
+form.addEventListener('submit', e => {
+    var begin_seconds = new Date().getTime();
+    // disable default action
+    e.preventDefault();
+
+    // collect files
+    const files = document.querySelector('[name=file]').files;
+    const formData = new FormData();
+    file_send = files[0]
+
+    //////////////////////////////////////////////////////////
+    var p;
+    var canvas = document.createElement("canvas");
+    var img1=document.createElement("img"); 
+
+
+    // console.log(getBase64Image())
+
+
+    formData.append('file', files[0]);
+
+    // post form data
+    const xhr = new XMLHttpRequest();
+
+    // log response
+    xhr.onload = () => {
+        var end_seconds = new Date().getTime();
+
+        console.log('ff');
+        console.log(xhr.responseText);
+        console.log(end_seconds - begin_seconds);
+    };
+
+    // create and send the reqeust
+    // xhr.open('PUT', url, true);
+    url = url_root + "?_image_path=" + get_input_name()
+    // url = url + ""
+
+    xhr.open('POST', url, true);
+    console.log(files)
+    console.log(file_send)
+    console.log(typeof file_send)
+    console.log(formData)
+    console.log(typeof formData)
+
+    // xhr.setRequestHeader("Content-Type", "application/json");
+    // xhr.setRequestHeader("X-File-Name", file_send.name);
+    // xhr.setRequestHeader("X-File-Size", file_send.size);
+    // xhr.send(file_send);
+    // xhr.send(get_input_name())
+    // xhr.send(formData);
+    xhr.send();
+});
+
+</script>
+
+<script>
+// var xhr = new XMLHttpRequest();
+
+
+// // xhr.open("POST", "http://localhost:8008/object-to-json", true);
 // xhr.open("GET", "http://localhost:8008/notify/v1/health", true);
-// xhr.open("GET", "https://reqres.in/api/products/3", true);
-xhr.onload = function(){
-    console.log(xhr.responseText);
-    // document.getElementById("employees").innerHTML = xhr.responseText["data"]["name"];
-    document.getElementById("employees").innerHTML = xhr.responseText;
-};
+// // xhr.open("GET", "https://reqres.in/api/products/3", true);
+// xhr.onload = function(){
+//     console.log(xhr.responseText);
+//     // document.getElementById("employees").innerHTML = xhr.responseText["data"]["name"];
+//     document.getElementById("employees").innerHTML = xhr.responseText;
+// };
 
-xhr.send();
+// xhr.send();
 
 
 </script>
 
 
 <script>
-  function performOCR() {
-    var files = document.getElementById("image_file").files
-    var formData = new FormData();
-    // var endpoint = '/api/v1/extract_text';
-    var endpoint = 'http://localhost:8008/object-to-json';
-    // http://localhost:8008/object-to-json
-    if (files.length == 1) {
-      formData.append('image', files[0])
-    }
-    else {
-      for (var i = 0; i < files.length; i++) {
-        formData.append('image' + i.toString(), files[i])
-      }
-      endpoint = 'http://localhost:8008/object-to-json';
-    //   endpoint = '/api/v1/bulk_extract_text';
-    }
+//   function performOCR() {
+//     var files = document.getElementById("image_file").files
+//     var formData = new FormData();
+//     // var endpoint = '/api/v1/extract_text';
+//     var endpoint = 'http://localhost:8008/object-to-json';
+//     // http://localhost:8008/object-to-json
+//     if (files.length == 1) {
+//       formData.append('image', files[0])
+//     }
+//     else {
+//       for (var i = 0; i < files.length; i++) {
+//         formData.append('image' + i.toString(), files[i])
+//       }
+//       endpoint = 'http://localhost:8008/object-to-json';
+//     //   endpoint = '/api/v1/bulk_extract_text';
+//     }
 
-    $.ajax({
-        type: 'POST',
-        url: endpoint,
-        data: formData,
-        contentType: false,
-        cache: false,
-        processData: false,
-        success: function(data) {
-          if (endpoint == '/api/v1/extract_text') {
-            swal("Converted Text", data.text);
-          }
-          else {
-            swal("Request Recieved", "Converted files will start showing up at the bottom soon!");
-            getConvertedFiles(data.task_id, data.num_files);
-          }
-        }
-    });
-  }
+//     $.ajax({
+//         type: 'POST',
+//         url: endpoint,
+//         data: formData,
+//         contentType: false,
+//         cache: false,
+//         processData: false,
+//         success: function(data) {
+//           if (endpoint == '/api/v1/extract_text') {
+//             swal("Converted Text", data.text);
+//           }
+//           else {
+//             swal("Request Recieved", "Converted files will start showing up at the bottom soon!");
+//             getConvertedFiles(data.task_id, data.num_files);
+//           }
+//         }
+//     });
+//   }
 
-  function getConvertedFiles(taskID, numFiles) {
-    var checker = setInterval(function(){
-      $.ajax({
-          type: 'GET',
-          url: '/api/v1/bulk_output/' + taskID,
-          contentType: false,
-          cache: false,
-          processData: false,
-          success: function(data) {
-            wrapper = document.getElementById("bulk_result")
-            for (var key in data.output) {
-              var element = document.createElement("button");
-              element.setAttribute("class", "btn btn-primary")
-              element.setAttribute("info", data.output[key])
-              element.setAttribute("id", key)
-              element.setAttribute("onclick", "displayText(this.id)")
-              element.innerHTML = key
-              wrapper.appendChild(element)
-            }
-            if (Object.keys(data.output).length == numFiles) {
-                stopChecker()
-            }
-          }
-      });
-    }, 3000);
+//   function getConvertedFiles(taskID, numFiles) {
+//     var checker = setInterval(function(){
+//       $.ajax({
+//           type: 'GET',
+//           url: '/api/v1/bulk_output/' + taskID,
+//           contentType: false,
+//           cache: false,
+//           processData: false,
+//           success: function(data) {
+//             wrapper = document.getElementById("bulk_result")
+//             for (var key in data.output) {
+//               var element = document.createElement("button");
+//               element.setAttribute("class", "btn btn-primary")
+//               element.setAttribute("info", data.output[key])
+//               element.setAttribute("id", key)
+//               element.setAttribute("onclick", "displayText(this.id)")
+//               element.innerHTML = key
+//               wrapper.appendChild(element)
+//             }
+//             if (Object.keys(data.output).length == numFiles) {
+//                 stopChecker()
+//             }
+//           }
+//       });
+//     }, 3000);
 
-    function stopChecker() {
-      clearInterval(checker)
-    }
-  }
+//     function stopChecker() {
+//       clearInterval(checker)
+//     }
+//   }
 
-function displayText(id) {
-  swal("Converted Text", document.getElementById(id).getAttribute("info"))
-}
+// function displayText(id) {
+//   swal("Converted Text", document.getElementById(id).getAttribute("info"))
+// }
 </script> 

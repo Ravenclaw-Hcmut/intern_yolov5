@@ -21,3 +21,18 @@ def get_image_from_bytes(binary_image, max_size=1024):
         )
     )
     return resized_image
+
+def get_image_from_path(_path, max_size=1024):
+    return Image.open(_path)
+    # input_image = Image.open(_path)
+    # width, height = input_image.size
+    # resize_factor = min(max_size / width, max_size / height)
+    # resized_image = input_image.resize(
+    #     (
+    #         int(input_image.width * resize_factor),
+    #         int(input_image.height * resize_factor),
+    #     )
+    # )
+    # return resized_image
+
+
